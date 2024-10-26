@@ -1,0 +1,846 @@
+:: StoryTitle
+EcoParty'24
+
+
+:: StoryData
+{
+  "ifid": "8D110E98-B425-4143-BA51-8C5761DCDAE7",
+  "format": "Harlowe",
+  "format-version": "3.3.9",
+  "start": "BOOT",
+  "zoom": 1
+}
+
+
+:: 1 HARDWARE EN APUROS {"position":"700,1325","size":"100,100"}
+{
+  <!-- Create a variable to track the position within the $typewriterText string -->
+  (set: $typewriterPos to 1)
+
+  <!-- Create a hook to hold the typed text -->
+  |typewriterOutput>[]
+
+  <!-- Set a delay of 20ms seconds per loop -->
+  (live: 20ms)[
+
+    <!-- Add the next character to the hook -->
+    (append: ?typewriterOutput)[(print: $typewriterText's $typewriterPos)]
+
+    <!-- Update the position -->
+    (set: $typewriterPos to it + 1)
+
+    <!-- If it's gone past the end, stop -->
+    (if: $typewriterPos is $typewriterText's length + 1)[
+      (stop:)
+    ]
+  ]
+}
+(set: $typewriterText to "... Parece que se ha dañado una parte del equipo ...
+
+No será posible conseguir que se desarrolle el combustible ekológico para los transbordadores en el espacio si no conseguimos arreglar este tema. El problema no parece ser demasiado grave, sólo retrasará el lanzamiento. Pero vas a necesitar herramientas.
+
+Todo el grupo se encuentra el la sala de control y no puede ocuparse de la reparación, no te va a quedar mas remedio que encargarte tú. Quién podría tener algo de herramienta para arreglar la placa de control del sistema?")
+
+(after: 30s, (cond: visits > 0, 200ms, 0))[\
+
+[[Ve a la villa del Hardware ...->1 VILLA HARDWARE]]
+\]    
+
+
+:: 1 PATAGON {"position":"700,1700","size":"100,100"}
+{
+  <!-- Create a variable to track the position within the $typewriterText string -->
+  (set: $typewriterPos to 1)
+
+  <!-- Create a hook to hold the typed text -->
+  |typewriterOutput>[]
+
+  <!-- Set a delay of 20ms seconds per loop -->
+  (live: 20ms)[
+
+    <!-- Add the next character to the hook -->
+    (append: ?typewriterOutput)[(print: $typewriterText's $typewriterPos)]
+
+    <!-- Update the position -->
+    (set: $typewriterPos to it + 1)
+
+    <!-- If it's gone past the end, stop -->
+    (if: $typewriterPos is $typewriterText's length + 1)[
+      (stop:)
+    ]
+  ]
+}
+(set: $typewriterText to "... Huele a peróxido ...
+
+Están cargando los tanques que se activarán al dejar la atmósfera terrestre mientras tu reparas los sistemas de comunicaciones con tu equipo. Al final, no hay problema que no se pueda reparar con un buen analizador de señal y un cautín. Impresionaste a los chicos con el detector de conversores DC-DC rotos que te hiciste con un imán, un led, y par de pasivos. Tras un primer barrido, descubriste que uno de los circuitos oscilaba cuando no debía. Lo desoldaste y lo volviste a montar cambiando una de las bobinas.
+
+Cuando cierras la tapa del sistema de lanzamiento, se te acerca un miembro de Patagon y te pasa una clave escrita a mano en un trozo de papel.
+
+- Gracias - mascullas y te das prisa en teclearlo para ver a donde te lleva.
+
+El badge reacciona, acabas de desbloquear tu primer Gato.")
+
+(after: 30s, (cond: visits > 0, 200ms, 0))[\
+
+[[Sales de Patagon->1 PATAGON adios]]
+\]    
+
+
+:: 1 PATAGON adios {"position":"700,1825","size":"100,100"}
+{
+  <!-- Create a variable to track the position within the $typewriterText string -->
+  (set: $typewriterPos to 1)
+
+  <!-- Create a hook to hold the typed text -->
+  |typewriterOutput>[]
+
+  <!-- Set a delay of 20ms seconds per loop -->
+  (live: 20ms)[
+
+    <!-- Add the next character to the hook -->
+    (append: ?typewriterOutput)[(print: $typewriterText's $typewriterPos)]
+
+    <!-- Update the position -->
+    (set: $typewriterPos to it + 1)
+
+    <!-- If it's gone past the end, stop -->
+    (if: $typewriterPos is $typewriterText's length + 1)[
+      (stop:)
+    ]
+  ]
+}
+(set: $typewriterText to "... Tu vehículo rueda por la carreta rajada tras las tormentas ...
+
+- Sabemos que el cambio de las condiciones climáticas ha provocado las tormentas, que en consecuencia ha traido daños a la carretera. Pero si hubieramos conducido menos, habríamos tenido menos impacto, no habría crisis climática, y podríamos usar otros medios de transporte - vas pensando en voz alta
+
+- No pude evitar escucharte, dice el batch. O no lo dice, sino que lo muestra en la pantalla, y sigue.
+
+- Una gran parte del problema es nuestra dependencia en la tecnología. Mejor dicho, en tecnología no óptima. Por ejemplo, si tienes código mal escrito, tus servidores corren por más tiempo. Si no optimizas, afecta al rendimiento del sistema. Pero, además, hay muchos errores de bajo nivel que pasan desapercibidos.
+
+- No sería bueno aprender más sobre como corregir esos errores para minimizar el consumo energético? - te preguntas mientras buscas a alguien que te pueda echar una mano a comprender mejor como gestionar los constantes errores de código")
+
+(after: 40s, (cond: visits > 0, 200ms, 0))[\
+
+[[Vas a ver al equipo de Yes We Hack->MISION 2]]
+\]    
+
+
+:: 1 RESISTENCIAS {"position":"700,1575","size":"100,100"}
+{
+  <!-- Create a variable to track the position within the $typewriterText string -->
+  (set: $typewriterPos to 1)
+
+  <!-- Create a hook to hold the typed text -->
+  |typewriterOutput>[]
+
+  <!-- Set a delay of 20ms seconds per loop -->
+  (live: 20ms)[
+
+    <!-- Add the next character to the hook -->
+    (append: ?typewriterOutput)[(print: $typewriterText's $typewriterPos)]
+
+    <!-- Update the position -->
+    (set: $typewriterPos to it + 1)
+
+    <!-- If it's gone past the end, stop -->
+    (if: $typewriterPos is $typewriterText's length + 1)[
+      (stop:)
+    ]
+  ]
+}
+(set: $typewriterText to "... YA NO MÁS LÍNEAS DE COLORES, POR FAVOR ...
+
+Apenas recordabas los detalles de la tabla de colores, has pasado un tiempo bastante largo con esta tarea. El técnico de la Villa Hardware te agracede con esa parsimonia que caracteriza a todo el mundo en el hardware. Hace una reverencia y, mirando al cielo, recita el mensaje que te ayuda a desbloquear el laboratorio portátil. 
+
+Anotas mentalmente cada uno de los símbolos de la clave y la introduces en tu badge. Con esto ya puedes regresar con la gente de Patagon para ayudarles a reparar su equipo. Recuerda: sin equipo no hay acceso a los recursos del espacio, sin los recursos, no podemos crear sistemas más efiencies. Sin los sistemas, la AI gastará todos los recursos de Tierra. 
+
+.... y eso es, justamente, lo que quieres evitar ...")
+
+(after: 35s, (cond: visits > 0, 200ms, 0))[\
+
+[[Lleva el laboratorio portátil a Patagon->1 PATAGON]]
+\]    
+
+
+:: 1 VILLA HARDWARE {"position":"700,1450","size":"100,100"}
+{
+  <!-- Create a variable to track the position within the $typewriterText string -->
+  (set: $typewriterPos to 1)
+
+  <!-- Create a hook to hold the typed text -->
+  |typewriterOutput>[]
+
+  <!-- Set a delay of 20ms seconds per loop -->
+  (live: 20ms)[
+
+    <!-- Add the next character to the hook -->
+    (append: ?typewriterOutput)[(print: $typewriterText's $typewriterPos)]
+
+    <!-- Update the position -->
+    (set: $typewriterPos to it + 1)
+
+    <!-- If it's gone past the end, stop -->
+    (if: $typewriterPos is $typewriterText's length + 1)[
+      (stop:)
+    ]
+  ]
+}
+(set: $typewriterText to "... El badge detecta algo ...
+
+La comunidad del hardware es un lugar tranquilo dónde las técnicas se dejan la visión trabajando con precisión milimétrica los diseños y probándolos para que funcionen bajo circunstancias extremas.
+
+- El equipo de laboratorio no se presta - comentá la jefa de taller.
+
+- Maldita sea - piensas - no puede ser todo tan complicado, apenas comenzamos y ya parece un obstáculo insalvable.
+
+Ya en voz alta:
+
+- No hay otra forma de ayudar a los de Patagon, necesito un laboratorio portátil. Es para ayer.
+
+- Entonces tendrás que hacer algo por mi. Se me cayó esta caja de resistencias y necesito ordenarlas por valor")
+
+(after: 30s, (cond: visits > 0, 200ms, 0))[\
+
+[[Te pones manos a la obra y ordenas las resistencias->1 RESISTENCIAS]]
+\]    
+
+
+:: 2 Yes We Hack adios {"position":"700,2075","size":"100,100"}
+{
+  <!-- Create a variable to track the position within the $typewriterText string -->
+  (set: $typewriterPos to 1)
+
+  <!-- Create a hook to hold the typed text -->
+  |typewriterOutput>[]
+
+  <!-- Set a delay of 20ms seconds per loop -->
+  (live: 20ms)[
+
+    <!-- Add the next character to the hook -->
+    (append: ?typewriterOutput)[(print: $typewriterText's $typewriterPos)]
+
+    <!-- Update the position -->
+    (set: $typewriterPos to it + 1)
+
+    <!-- If it's gone past the end, stop -->
+    (if: $typewriterPos is $typewriterText's length + 1)[
+      (stop:)
+    ]
+  ]
+}
+(set: $typewriterText to "... El saludo secreto de la gente de Yes We Hack ...
+
+El saludo es tan sencillo como gritar 'Yes We Hack' al llegar a su campamento en la Eko, así que lo gritas bien algo para que te oiga todo el mundo. Lo sabes de haberles oido venerar en las mañanas a San K. Ritchie que fue santificado como martir del C tras casí 60 años desde la primera publicación que hiciera sobre el tema. La gente de Yes We Hack van todos con sus auriculares de cancelación de ruido y apenas les molestas al gritar el lema.
+
+Se te acerca une de les coleques hackers y te comenta como ahí el hackeo es colaborativo y como hace falta que te encargues de un par de cosas. Te pasa una tabla de conversión y te pide que le eches una mano a decodificar un mensaje. No tienen la tabla completa, así que tienes que echar mano de tus conocimientos en criptografía para descifrar el error oculto en el código. Como pago por el trabajo, te dará un add-on para tu badge.
+
+- No se si sabías, pero la gente de eCats son muy fans de los add-ons. Lo mismo lo puedes intercambiar uno de esos por uno de los gatos que buscas - te comenta el técnico que te dió le badge - los rumores dicen que ellos tienen un número casi infinito de gatos en su haber.
+")
+
+(after: 40s, (cond: visits > 0, 200ms, 0))[\
+
+[[Te marchas camino de eCats->2 eCats]]
+\]    
+
+
+:: 2 eCats {"position":"700,2200","size":"100,100"}
+{
+  <!-- Create a variable to track the position within the $typewriterText string -->
+  (set: $typewriterPos to 1)
+
+  <!-- Create a hook to hold the typed text -->
+  |typewriterOutput>[]
+
+  <!-- Set a delay of 20ms seconds per loop -->
+  (live: 20ms)[
+
+    <!-- Add the next character to the hook -->
+    (append: ?typewriterOutput)[(print: $typewriterText's $typewriterPos)]
+
+    <!-- Update the position -->
+    (set: $typewriterPos to it + 1)
+
+    <!-- If it's gone past the end, stop -->
+    (if: $typewriterPos is $typewriterText's length + 1)[
+      (stop:)
+    ]
+  ]
+}
+(set: $typewriterText to "... en el stand de los gatos, todos maullan ...
+
+No es broma, se ha convertido en una costumbre. Les eCats se han envilecido y ahora maullan como si de verdad fueran mascotas peludas. Te acercas y te preguntas como puedes comunicarte con elles.
+
+Recuerdas aquel gato que vivía en casa de tu abuela. Al acariciarle tras de las orejas, ronroneaba. Quizás si te acercas en modo ronroneante, consigas algo de elles.
+
+- Prrrr, prrrrmiiiaaauuu - dices primero tímidamente y luego repites cada vez más alto
+
+Uno de los eCats gira su cabeza, olisquea el aire y te maulla sonriente:
+
+- Miiiiiaaauuu prrr, prrr.
+
+Mira tu badge, que llevas colgado del cuello, lo manipula, ve el add-on y con un marcatextos, te escribe algo en la palma de la mano. Tu siques estando absorto en ver a une adulte maullar al unísono con otres, pero ya tienes lo que quieres y estas listo para marchar cuando ...
+")
+
+(after: 40s, (cond: visits > 0, 200ms, 0))[\
+
+[[Alguien te susurra al oido->2 eCats adios]]
+\]    
+
+
+:: 2 eCats adios {"position":"700,2325","size":"100,100"}
+{
+  <!-- Create a variable to track the position within the $typewriterText string -->
+  (set: $typewriterPos to 1)
+
+  <!-- Create a hook to hold the typed text -->
+  |typewriterOutput>[]
+
+  <!-- Set a delay of 20ms seconds per loop -->
+  (live: 20ms)[
+
+    <!-- Add the next character to the hook -->
+    (append: ?typewriterOutput)[(print: $typewriterText's $typewriterPos)]
+
+    <!-- Update the position -->
+    (set: $typewriterPos to it + 1)
+
+    <!-- If it's gone past the end, stop -->
+    (if: $typewriterPos is $typewriterText's length + 1)[
+      (stop:)
+    ]
+  ]
+}
+(set: $typewriterText to "... une tipe con barba te esta diciendo algo al oido ...
+
+... no lo oyes bien, respondes con un 'miau' porque tienes miedo de romper la magia y que le extrañe se marche sin enterarte el mensaje. Después de un par de repecitiones ...
+
+- No seas idiota! No soy un gato! - exclama
+
+- Perdón, como lo iba yo a saber? Pero es que tanto maullar se me olvidan las cosas
+
+- Te decía que debieras de buscar como resolver tu última misión
+
+- Eso es más fácil de decir que de hacer
+
+- Habla con tu badge, para eso ha venido del futuro
+
+Se me queda cara de tonto, como cuando un cachorro de gato se duerme con la lengua fuera.
+")
+
+(after: 40s, (cond: visits > 0, 200ms, 0))[\
+
+[[Miro a la pantalla del badge->Mision 3]]
+\]    
+
+
+:: 3 ingenieria adios {"position":"700,2825","size":"100,100"}
+{
+  <!-- Create a variable to track the position within the $typewriterText string -->
+  (set: $typewriterPos to 1)
+
+  <!-- Create a hook to hold the typed text -->
+  |typewriterOutput>[]
+
+  <!-- Set a delay of 20ms seconds per loop -->
+  (live: 20ms)[
+
+    <!-- Add the next character to the hook -->
+    (append: ?typewriterOutput)[(print: $typewriterText's $typewriterPos)]
+
+    <!-- Update the position -->
+    (set: $typewriterPos to it + 1)
+
+    <!-- If it's gone past the end, stop -->
+    (if: $typewriterPos is $typewriterText's length + 1)[
+      (stop:)
+    ]
+  ]
+}
+(set: $typewriterText to "... el último gato queda desbloqueado ...
+
+Miras a la pantalla, tu llama luce más brillante que nunca, has conseguido todos tus objetivos y el sistema muta. Te escribe:
+
+'Lo has logrado, has cambiado el futuro por medio de tus acciones, has conseguido los 3 tokens siéntete orgulloso seguro has aprendido algo nuevo y conocido nuevos amigos'
+
+Has desbloqueado el futuro, literalmente. Enhorabuena, con hackers como tú ... quien quiere amigos. Gracias por lograr la fusión entre lo humano y la AI. Tenemos un futuro brillante por delante.
+")
+
+(after: 40s, (cond: visits > 0, 200ms, 0))[\
+
+[[Lanzas un physing->3 ingenieria physing]]
+
+\]    
+
+
+:: 3 ingenieria directo {"position":"575,2700","size":"100,100"}
+{
+  <!-- Create a variable to track the position within the $typewriterText string -->
+  (set: $typewriterPos to 1)
+
+  <!-- Create a hook to hold the typed text -->
+  |typewriterOutput>[]
+
+  <!-- Set a delay of 20ms seconds per loop -->
+  (live: 20ms)[
+
+    <!-- Add the next character to the hook -->
+    (append: ?typewriterOutput)[(print: $typewriterText's $typewriterPos)]
+
+    <!-- Update the position -->
+    (set: $typewriterPos to it + 1)
+
+    <!-- If it's gone past the end, stop -->
+    (if: $typewriterPos is $typewriterText's length + 1)[
+      (stop:)
+    ]
+  ]
+}
+(set: $typewriterText to "... decides que hay que al menos sacar la información básica de alguien de fiar ...
+
+Te asocias con otros dos y decides que lo mejor es raptar a alguien de eCats, que son los que custodian a los gatitos para ver si sabe quien puede estar en posesión del último password. Buscáis una cinta de tela y decidís que el Wero es posiblemente alguien que puede estar en posesión de esta información.
+
+Le sorprendéis en un WC y lo atáis a una silla. Una vez ahí, le dais una oportunidad de cantar sin dolor, pero la rechaza. Así pues, le hacéis cosquillas en las plantas de los pies con un trozo de papel. Él no puede resistirse y termina por daros el nombre que buscáis.
+
+Lo siguiente es atacarle con un physing ... tendrás que pensar como hacerlo posible.
+")
+
+(after: 40s, (cond: visits > 0, 200ms, 0))[\
+
+[[Lanzas un physing->3 ingenieria physing]]
+
+\]    
+
+
+:: 3 ingenieria physing {"position":"825,2700","size":"100,100"}
+{
+  <!-- Create a variable to track the position within the $typewriterText string -->
+  (set: $typewriterPos to 1)
+
+  <!-- Create a hook to hold the typed text -->
+  |typewriterOutput>[]
+
+  <!-- Set a delay of 20ms seconds per loop -->
+  (live: 20ms)[
+
+    <!-- Add the next character to the hook -->
+    (append: ?typewriterOutput)[(print: $typewriterText's $typewriterPos)]
+
+    <!-- Update the position -->
+    (set: $typewriterPos to it + 1)
+
+    <!-- If it's gone past the end, stop -->
+    (if: $typewriterPos is $typewriterText's length + 1)[
+      (stop:)
+    ]
+  ]
+}
+(set: $typewriterText to "... montas una web con un campo de texto y una historia fantástica ...
+
+Preparas una campaña de physing eperando que cuele. Recibes varios códigos que tienes que probar.
+")
+
+(after: 40s, (cond: visits > 0, 200ms, 0))[\
+
+[[Pruebas lo códigos uno a uno->3 ingenieria adios]]
+
+\]    
+
+
+:: 3 ingenieria posters {"position":"700,2700","size":"100,100"}
+{
+  <!-- Create a variable to track the position within the $typewriterText string -->
+  (set: $typewriterPos to 1)
+
+  <!-- Create a hook to hold the typed text -->
+  |typewriterOutput>[]
+
+  <!-- Set a delay of 20ms seconds per loop -->
+  (live: 20ms)[
+
+    <!-- Add the next character to the hook -->
+    (append: ?typewriterOutput)[(print: $typewriterText's $typewriterPos)]
+
+    <!-- Update the position -->
+    (set: $typewriterPos to it + 1)
+
+    <!-- If it's gone past the end, stop -->
+    (if: $typewriterPos is $typewriterText's length + 1)[
+      (stop:)
+    ]
+  ]
+}
+(set: $typewriterText to "... vas a por todas, así que diseñas una campaña de marketing intentando dar pena ...
+
+Creas un póster de 'se busca gato perdido' y lo pones en diferentes puntos estratégicos del espacio. Se te ocurre dejar un campo en blanco donde la gente puede poner el código si lo saben. 
+
+Después de un día, has recogido varios códigos. Has apelado a los sentimientos de tu contrario y funcionó. Lo que sigue es probar los diferentes códigos hasta que uno funcione ... porque no extrañaría que alguien se lo invente solo por molestar.
+")
+
+(after: 40s, (cond: visits > 0, 200ms, 0))[\
+
+[[Pruebas los códigos->3 ingenieria adios]]
+
+\]    
+
+
+:: 3 ingenieria social {"position":"700,2575","size":"100,100"}
+{
+  <!-- Create a variable to track the position within the $typewriterText string -->
+  (set: $typewriterPos to 1)
+
+  <!-- Create a hook to hold the typed text -->
+  |typewriterOutput>[]
+
+  <!-- Set a delay of 20ms seconds per loop -->
+  (live: 20ms)[
+
+    <!-- Add the next character to the hook -->
+    (append: ?typewriterOutput)[(print: $typewriterText's $typewriterPos)]
+
+    <!-- Update the position -->
+    (set: $typewriterPos to it + 1)
+
+    <!-- If it's gone past the end, stop -->
+    (if: $typewriterPos is $typewriterText's length + 1)[
+      (stop:)
+    ]
+  ]
+}
+(set: $typewriterText to "... quien y qué ...
+
+Buscas a alguien en el campamento de ingeniería social y, muy torpemente explicas como buscas un código que te permita desbloquear el último portal de tu misión, que alguien tiene esa clave, y que se la tienes que robar cuanto antes.
+
+Del otro lado te dan un repaso de las técnicas de ingeniería social: desde pretender ser alguien que no eres, hasta apelar a los buenos sentimientos. Tu gran problema es que no sabes quien es la persona que tiene la información.
+
+- Tendrás que lanzar una campaña - te dicen - tendrás que atacar a todos y ver si la persona que buscas ... pica. Seguro que no tienes niguna pista de quien puede ser?
+
+Mientras, tu ya estás pensando en como preparar tu ataque masivo. 
+")
+
+(after: 40s, (cond: visits > 0, 200ms, 0))[\
+
+[[Se te ocurre hacer un póster->3 ingenieria posters]]
+
+[[Lanzas un physing->3 ingenieria physing]]
+
+[[Estas desesperado->3 ingenieria directo]]
+\]    
+
+
+:: BATTERY ON {"position":"700,1075","size":"100,100"}
+{
+  <!-- Create a variable to track the position within the $typewriterText string -->
+  (set: $typewriterPos to 1)
+
+  <!-- Create a hook to hold the typed text -->
+  |typewriterOutput>[]
+
+  <!-- Set a delay of 20ms seconds per loop -->
+  (live: 20ms)[
+
+    <!-- Add the next character to the hook -->
+    (append: ?typewriterOutput)[(print: $typewriterText's $typewriterPos)]
+
+    <!-- Update the position -->
+    (set: $typewriterPos to it + 1)
+
+    <!-- If it's gone past the end, stop -->
+    (if: $typewriterPos is $typewriterText's length + 1)[
+      (stop:)
+    ]
+  ]
+}
+(set: $typewriterText to "No cuentas con energía infinita, sólo cuentas con una llama de vida. Deberás cuidarla y no dejar que se apague en los próximos días. Realiza las actividades que sean necesarias para mantenerla encendida durante toda la travesía.
+
+Cierra el broche de tu uniforme, ajusta los parámetros espacio-temporales y ...")
+
+(after: 10s, (cond: visits > 0, 200ms, 0))[\
+
+[[Lánzate a la Misión 1->MISION 1]]
+\]    
+
+
+:: BOOT {"position":"575,575","size":"100,100"}
+{
+  <!-- Create a variable to track the position within the $typewriterText string -->
+  (set: $typewriterPos to 1)
+
+  <!-- Create a hook to hold the typed text -->
+  |typewriterOutput>[]
+
+  <!-- Set a delay of 20ms seconds per loop -->
+  (live: 20ms)[
+
+    <!-- Add the next character to the hook -->
+    (append: ?typewriterOutput)[(print: $typewriterText's $typewriterPos)]
+
+    <!-- Update the position -->
+    (set: $typewriterPos to it + 1)
+
+    <!-- If it's gone past the end, stop -->
+    (if: $typewriterPos is $typewriterText's length + 1)[
+      (stop:)
+    ]
+  ]
+}
+
+<!-- Set the text to show -->
+(set: $typewriterText to "... Iniciando comms ...")
+
+(after: 4s, (cond: visits > 0, 200ms, 0))[\
+[[SYSTEM ON->SYSTEM ON]]
+\]    
+
+
+
+
+
+
+
+:: COMMS ON {"position":"575,825","size":"100,100"}
+{
+  <!-- Create a variable to track the position within the $typewriterText string -->
+  (set: $typewriterPos to 1)
+
+  <!-- Create a hook to hold the typed text -->
+  |typewriterOutput>[]
+
+  <!-- Set a delay of 20ms seconds per loop -->
+  (live: 20ms)[
+
+    <!-- Add the next character to the hook -->
+    (append: ?typewriterOutput)[(print: $typewriterText's $typewriterPos)]
+
+    <!-- Update the position -->
+    (set: $typewriterPos to it + 1)
+
+    <!-- If it's gone past the end, stop -->
+    (if: $typewriterPos is $typewriterText's length + 1)[
+      (stop:)
+    ]
+  ]
+}
+(set: $typewriterText to "... Excelente, sabía que había encontrado al hacker adecuado ...
+
+Hace 20 años ... en tu presente ... en el 2024 ... se cumplía el 20 aniversario de la EkoParty. El hackerencuentro más importante del mundo. Este encuentro es determinante para el futuro de las relaciones entre los humanos y la inteligencia artificial.
+
+Para asegurarnos de que todo llega buen puerto, habrás de cumplir 3 misiones. A la finalización de cada una, conseguirás una gati-medalla de reconocimiento. Entonces, y solo entonces, tendremos la seguridad de haber logrado nuestro objetivo.
+
+No es la primera vez que regreso a este presente, pero hasta ahora ninguna de las líneas temporales del multiverso ha llegado a un final en paz. Yo te acompañaré en el camino, juntos podremos demostrar que la colaboración humano-máquina es posible.")
+
+(after: 30s, (cond: visits > 0, 200ms, 0))[\
+[[SIGUE LEYENDO->SERIAL ON]]
+\]    
+
+
+:: MISION 1 {"position":"700,1200","size":"100,100"}
+{
+  <!-- Create a variable to track the position within the $typewriterText string -->
+  (set: $typewriterPos to 1)
+
+  <!-- Create a hook to hold the typed text -->
+  |typewriterOutput>[]
+
+  <!-- Set a delay of 20ms seconds per loop -->
+  (live: 20ms)[
+
+    <!-- Add the next character to the hook -->
+    (append: ?typewriterOutput)[(print: $typewriterText's $typewriterPos)]
+
+    <!-- Update the position -->
+    (set: $typewriterPos to it + 1)
+
+    <!-- If it's gone past the end, stop -->
+    (if: $typewriterPos is $typewriterText's length + 1)[
+      (stop:)
+    ]
+  ]
+}
+(set: $typewriterText to "... Espero que hayas fijado el conducto del oxígeno ...
+
+Toma tu píldora para la hibernación y deja que el sistema de navegación te lleve hacia la siguiente misión - Marte - el planeta rojo. Los recursos que podremos obtener de ahí en los próximos 10 años serán clave para alimentar las supercomputadoras necesarias para el desarrollo de la AI sin dañar a Tierra.
+
+Las misiones espaciales requieren que todo nuestro equipo funcione a la perfección y que haya sido probado cientos de veces. Los sistemas hardware han de estar replicados y el software se actualiza OTA desde miles o millones de kilómetros de distancia. Cómo ves, la comunidad de Patagon Space se está preparando para llegar tan lejos como sea necesario.")
+
+(after: 30s, (cond: visits > 0, 200ms, 0))[\
+
+[[Sin embargo ...->1 HARDWARE EN APUROS]]
+\]    
+
+
+:: MISION 2 {"position":"700,1950","size":"100,100"}
+{
+  <!-- Create a variable to track the position within the $typewriterText string -->
+  (set: $typewriterPos to 1)
+
+  <!-- Create a hook to hold the typed text -->
+  |typewriterOutput>[]
+
+  <!-- Set a delay of 20ms seconds per loop -->
+  (live: 20ms)[
+
+    <!-- Add the next character to the hook -->
+    (append: ?typewriterOutput)[(print: $typewriterText's $typewriterPos)]
+
+    <!-- Update the position -->
+    (set: $typewriterPos to it + 1)
+
+    <!-- If it's gone past the end, stop -->
+    (if: $typewriterPos is $typewriterText's length + 1)[
+      (stop:)
+    ]
+  ]
+}
+(set: $typewriterText to "... El saludo secreto de la gente de Yes We Hack ...
+
+El saludo es tan sencillo como gritar 'Yes We Hack' al llegar a su campamento en la Eko, así que lo gritas bien algo para que te oiga todo el mundo. Lo sabes de haberles oido venerar en las mañanas a San K. Ritchie que fue santificado como martir del C tras casí 60 años desde la primera publicación que hiciera sobre el tema. La gente de Yes We Hack van todos con sus auriculares de cancelación de ruido y apenas les molestas al gritar el lema.
+
+Se te acerca une de les coleques hackers y te comenta como ahí el hackeo es colaborativo y como hace falta que te encargues de un par de cosas. Te pasa una tabla de conversión y te pide que le eches una mano a decodificar un mensaje. No tienen la tabla completa, así que tienes que echar mano de tus conocimientos en criptografía para descifrar el error oculto en el código. Como pago por el trabajo, te dará un add-on para tu badge.
+
+- No se si sabías, pero la gente de eCats son muy fans de los add-ons. Lo mismo lo puedes intercambiar uno de esos por uno de los gatos que buscas - te comenta el técnico que te dió le badge - los rumores dicen que ellos tienen un número casi infinito de gatos en su haber.
+")
+
+(after: 40s, (cond: visits > 0, 200ms, 0))[\
+
+[[Te marchas camino de eCats->2 Yes We Hack adios]]
+\]    
+
+
+:: Mision 3 {"position":"700,2450","size":"100,100"}
+{
+  <!-- Create a variable to track the position within the $typewriterText string -->
+  (set: $typewriterPos to 1)
+
+  <!-- Create a hook to hold the typed text -->
+  |typewriterOutput>[]
+
+  <!-- Set a delay of 20ms seconds per loop -->
+  (live: 20ms)[
+
+    <!-- Add the next character to the hook -->
+    (append: ?typewriterOutput)[(print: $typewriterText's $typewriterPos)]
+
+    <!-- Update the position -->
+    (set: $typewriterPos to it + 1)
+
+    <!-- If it's gone past the end, stop -->
+    (if: $typewriterPos is $typewriterText's length + 1)[
+      (stop:)
+    ]
+  ]
+}
+(set: $typewriterText to "... al final el problema es humano ...
+
+La pantalla brilla en tus manos mientras toca una melodía en bucle desde que conseguiste el segundo token. No entiendías muy bien porque, pero ahora lo sabes ... sólo esperaba a que interactuases con él.
+
+*** Tienes que extraer la información que te falta a través de ingeniería social ***
+
+*** Alguien de la organización posee el código que buscas ***
+
+*** Yo pensaría en como hacerte pasar por alguien, o robar los datos mediante physing, pero esto va a ser cosa tuya ***
+
+*** Deberías de buscar algo de consejo antes de seguir ***
+
+- Pedir ayuda? Pero ni siquiera se a quien le tengo que robar que ... que tipo de ayuda voy a pedir - murmuras ... la pantalla parpadea y sigue
+
+*** Deberías de aprender algunas técnicas de ingeniería social ***
+")
+
+(after: 40s, (cond: visits > 0, 200ms, 0))[\
+
+[[Vas a ver a la gente de ingeniería social->3 ingenieria social]]
+\]    
+
+
+:: SERIAL ON {"position":"575,950","size":"100,100"}
+{
+  <!-- Create a variable to track the position within the $typewriterText string -->
+  (set: $typewriterPos to 1)
+
+  <!-- Create a hook to hold the typed text -->
+  |typewriterOutput>[]
+
+  <!-- Set a delay of 20ms seconds per loop -->
+  (live: 20ms)[
+
+    <!-- Add the next character to the hook -->
+    (append: ?typewriterOutput)[(print: $typewriterText's $typewriterPos)]
+
+    <!-- Update the position -->
+    (set: $typewriterPos to it + 1)
+
+    <!-- If it's gone past the end, stop -->
+    (if: $typewriterPos is $typewriterText's length + 1)[
+      (stop:)
+    ]
+  ]
+}
+(set: $typewriterText to "... La verdad ... no estoy segura como resolver los retos, solo se que tu badge tiene detección de proximidad y es capaz de determinar en que villa te encuentras. Al aproximarte a las zonas apropiadas de las villas y lugares eko podrás descargar las acciones a realizar. 
+
+No olvides que no estás sola, hay otras embarcadas en tu aventura. Colaborar es clave, comunicate e intercambia información con el resto.
+
+Tampoco olvides realizar otras misiones alternativas, podrán influenciar tu futuro y decidir aspectos tan banales como si llegarás o no a tener pareja. No pierdas el norte, tienes una misión. Es por el bien de toda la humanidad.")
+
+(after: 22s, (cond: visits > 0, 200ms, 0))[\
+[[SIGUE LEYENDO->BATTERY ON]]
+\]    
+
+
+
+:: SYSTEM ON {"position":"575,700","size":"100,100"}
+{
+  <!-- Create a variable to track the position within the $typewriterText string -->
+  (set: $typewriterPos to 1)
+
+  <!-- Create a hook to hold the typed text -->
+  |typewriterOutput>[]
+
+  <!-- Set a delay of 20ms seconds per loop -->
+  (live: 20ms)[
+
+    <!-- Add the next character to the hook -->
+    (append: ?typewriterOutput)[(print: $typewriterText's $typewriterPos)]
+
+    <!-- Update the position -->
+    (set: $typewriterPos to it + 1)
+
+    <!-- If it's gone past the end, stop -->
+    (if: $typewriterPos is $typewriterText's length + 1)[
+      (stop:)
+    ]
+  ]
+}
+(set: $typewriterText to "Vengo de 20 años en el futuro.\n
+El mundo está gobernado por la inteligencia artificial y la humanidad ahora es prisionera, me he instalado en este dispositivo y necesito la ayuda de un maestro del cyber hacking y creo puedes ser tú ...
+
+... Para evitar el fin de la humanidad en el futuro es necesario que hagamos algunas cosas para cambiarlo, cosas sencillas pero que harán para vencer a ...")
+
+(after: 15s, (cond: visits > 0, 200ms, 0))[\
+Me puedes ayudar?
+
+[[No->SYSTEM ON]] / [[Si->COMMS ON]]
+\]    
+
+
+:: StoryStylesheet [stylesheet]
+@import url('https://fonts.googleapis.com/css2?family=Silkscreen:wght@400;700&display=swap');
+
+.silkscreen-regular {
+  font: "Silkscreen", sans-serif;
+  font-family: "Silkscreen", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.silkscreen-bold {
+  font-family: "Silkscreen", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+tw-story {
+    font-family: "Silkscreen", sans-serif;
+	font-size: 1.5em;
+	line-height: 1.5em;
+}
+
